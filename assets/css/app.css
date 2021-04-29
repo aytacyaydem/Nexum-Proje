@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11603,4 +11604,73 @@ ul hr {
     -webkit-transform: translateY(-1rem);
             transform: translateY(-1rem);
   }
+}
+
+/*Buradan sonra Results sayfasının stilleri başlıyor*/
+#results {
+  height: 100%;
+}
+
+#results .search-info-header {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  padding: 0px 30px 15px;
+  border-bottom: 1px solid #5883ff;
+}
+
+#results .search-info-header .header-keyword {
+  margin: 0;
+  color: #5883ff;
+}
+
+#results .search-info-header .header-count {
+  margin: 0;
+  color: #9b9b9b;
+}
+
+#results .result-container #resultRow .img-left img {
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+#results .result-container #resultRow .info-right {
+  padding: 0px 30px;
+  line-height: normal;
+}
+
+#results .result-container #resultRow .info-right .info-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+#results .result-container #resultRow .info-right .star-icon {
+  font-size: 13px;
+  color: #5883ff;
+  margin-right: 5px;
+}
+
+#results .result-container #resultRow .info-right .info-rating {
+  font-size: 18px;
+  color: #5883ff;
+  font-weight: 500;
+}
+
+#results .result-container #resultRow .info-right .rating-from {
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+#results .result-container #resultRow .info-right .go-detail {
+  color: black;
+}
+
+#results .result-container #resultRow .info-right .plot-text {
+  margin: 0;
+}
+
+#results .result-container #resultRow ul {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

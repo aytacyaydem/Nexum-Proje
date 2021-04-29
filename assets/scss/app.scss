@@ -154,3 +154,67 @@ ul hr {
   from   {transform: translateY(0rem);}
   to {transform: translateY(-1rem);}
 }
+
+/*Buradan sonra Results sayfasının stilleri başlıyor*/
+#results {
+  height: 100%;
+  .search-info-header {
+    margin-top: 5rem;
+    margin-bottom:3rem;
+    padding: 0px 30px 15px;
+    border-bottom: 1px solid $primary;
+ 
+    .header-keyword {
+      margin:0;
+      color: $primary;
+    }
+    .header-count {
+      margin:0;
+      color:#9b9b9b;
+    }
+  }
+  .result-container {
+    #resultRow {
+      .img-left {
+        img {
+          height: 100%;
+          object-fit: fill;
+        } 
+      }
+      .info-right {
+        padding:0px 30px;
+        line-height: normal;
+        .info-title {
+          font-size: 18px;
+          font-weight: 500;
+          margin:0px;
+        }
+        .star-icon {
+          font-size: 13px;
+          color:$primary;
+          margin-right: 5px;
+        }
+        .info-rating {
+          font-size: 18px;
+          color:$primary;
+          font-weight: 500;
+        }
+        .rating-from {
+          font-size: 14px;
+          color:#9b9b9b;
+        }
+        .go-detail {
+          color:black;
+        }
+        .plot-text {
+          margin:0;
+        }
+      }
+      ul {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      
+      }
+    }
+  }
+}

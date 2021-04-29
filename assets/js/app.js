@@ -201,3 +201,11 @@ $("#search-input").on("keyup", async function (e) {
   
   
 })
+
+$(".more-btn").on("click",function(e) {
+  e.preventDefault();
+  alert("Daha fazla sonuç tıklandı");
+  localStorage.setItem("results",JSON.stringify(data));
+  localStorage.setItem("keyword",JSON.stringify($("#search-input").val()))
+  window.location.href = "./results.html"
+})
