@@ -4,6 +4,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11436,16 +11437,88 @@ html {
 body {
   height: 100%;
   background-color: #f7f9fd;
+  font-family: 'Roboto', sans-serif;
 }
 
 #search {
   height: 100%;
 }
 
+#search #result-container {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(88, 131, 255, 0.1);
+          box-shadow: 0 2px 10px 0 rgba(88, 131, 255, 0.1);
+  border: solid 1px #f1eef2;
+}
+
+#search #result-container .triangle {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 15px solid white;
+  position: absolute;
+  left: 30px;
+  top: -13px;
+}
+
+#search #result-container ul li .img-left img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#search #result-container ul li .info-right {
+  padding: 0px 30px;
+  line-height: normal;
+}
+
+#search #result-container ul li .info-right .info-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+#search #result-container ul li .info-right .star-icon {
+  font-size: 13px;
+  color: #5883ff;
+  margin-right: 5px;
+}
+
+#search #result-container ul li .info-right .info-rating {
+  font-size: 18px;
+  color: #5883ff;
+  font-weight: 500;
+}
+
+#search #result-container ul li .info-right .rating-from {
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+#search #result-container ul li .info-right .go-detail {
+  color: black;
+}
+
+#search #result-container ul li .info-right .plot-text {
+  margin: 0;
+}
+
+#search #result-container ul li ul {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 #search-input {
   margin: 0 auto;
   height: 55px;
   padding: 15px 30px;
+  border-radius: 10px;
+  border: solid 1px #f1eef2;
+}
+
+#search-input:focus {
+  outline: none;
 }
 
 #search-input::-webkit-input-placeholder {
@@ -11472,13 +11545,42 @@ body {
   color: #5883ff;
 }
 
+.search-list {
+  padding: 30px 30px 0;
+}
+
 #result-row {
   margin-top: 10px;
+  margin-bottom: 5rem;
+}
+
+#result-row hr {
+  margin: 30px 0;
+  background-color: gray;
 }
 
 .work-animation {
   -webkit-animation: my-animation .8s forwards;
           animation: my-animation .8s forwards;
+}
+
+.search-img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+ul hr {
+  margin: 30px 0;
+  background-color: gray;
+}
+
+.more-btn {
+  margin-bottom: 24px;
+  color: #5883ff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 @-webkit-keyframes my-animation {
@@ -11487,8 +11589,8 @@ body {
             transform: translateY(0rem);
   }
   to {
-    -webkit-transform: translateY(-10rem);
-            transform: translateY(-10rem);
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
   }
 }
 
@@ -11498,7 +11600,7 @@ body {
             transform: translateY(0rem);
   }
   to {
-    -webkit-transform: translateY(-10rem);
-            transform: translateY(-10rem);
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
   }
 }
