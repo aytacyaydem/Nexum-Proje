@@ -1,5 +1,5 @@
-var API_SEARCH_URL = "http://www.omdbapi.com/?apikey=cd58487e&s="
-var API_GET_MOVIE_URL = "http://www.omdbapi.com/?apikey=cd58487e&i="
+var API_SEARCH_URL = "https://www.omdbapi.com/?apikey=cd58487e&s="
+var API_GET_MOVIE_URL = "https://www.omdbapi.com/?apikey=cd58487e&i="
 var isFetchSS = false;
 var isGetSingleSS = false;
 var data = []
@@ -189,7 +189,7 @@ $("#search-input").on("keyup", async function (e) {
     }else {
       $("#search").css("margin-top","0px");
     }
-  },1500)
+  },1300)
   if($(this).val().length <= 2 || data.length == 0) {
     $(".search-list").html("")
     $("#result-row").removeClass("d-flex");
@@ -204,7 +204,6 @@ $("#search-input").on("keyup", async function (e) {
 
 $(".more-btn").on("click",function(e) {
   e.preventDefault();
-  alert("Daha fazla sonuç tıklandı");
   localStorage.setItem("results",JSON.stringify(data));
   localStorage.setItem("keyword",JSON.stringify($("#search-input").val()))
   window.location.href = "./results.html"

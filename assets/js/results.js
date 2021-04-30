@@ -1,7 +1,7 @@
 let results = []
 let keyword = ""
 let detailed = [];
-var API_GET_MOVIE_URL = "http://www.omdbapi.com/?apikey=cd58487e&i="
+var API_GET_MOVIE_URL = "https://www.omdbapi.com/?apikey=cd58487e&i="
 
 async function getSingleMovieFromAPI(movieID){
     try {
@@ -32,7 +32,7 @@ $(function() {
        
         let response = await getSingleMovieFromAPI(item.imdbID)
         const x = `
-        <div class="col-lg-6">
+        <div class="col-6 result-widget" >
         <div class="row col-md-12 h-100">
         <div class="col-md-4 img-left px-0">
         <img src="${response.Poster == "N/A" ? "https://media.comicbook.com/files/img/default-movie.png" :response.Poster }" alt="Poster Image" class="search-img" />
@@ -69,8 +69,14 @@ $(function() {
         //     console.log($("#resultRow").children().length);
         //     $("#resultRow").append(`<div class="divider"</div>`)
         // }
-       
+        if(index+1 == results.length) {
+            $("#resultRow").children().each((index,element) => {
+                    let a =  $("#resultRow").children(`:nth-child(${index+1}), :nth-child(${index+2})`)
+              
+            })
+        } 
         
     })
+   
     
 })

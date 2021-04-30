@@ -79,7 +79,8 @@ gulp.task('css:minify', gulp.series('scss', function cssMinify() {
 // Minify Js
 gulp.task('js:minify', function () {
   return gulp.src([
-    './assets/js/app.js'
+    './assets/js/app.js',
+    './assets/js/results.js'
   ])
     .pipe(uglify())
     .pipe(rename({

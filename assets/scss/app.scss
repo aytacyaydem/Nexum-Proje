@@ -175,6 +175,11 @@ ul hr {
   }
   .result-container {
     #resultRow {
+      .result-widget {
+        margin-bottom: 30px;
+        border-bottom: 1px solid $placeholder;
+        padding-bottom: 30px;
+      }
       .img-left {
         img {
           height: 100%;
@@ -218,3 +223,26 @@ ul hr {
     }
   }
 }
+
+@media (max-width: 767.98px) { 
+  #resultRow {
+    flex-direction: column;
+    .result-widget {
+      width: 100%;
+      img {
+        width: 50%;
+      }
+
+    }
+    .img-left {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .info-right {
+      padding: 0px !important;
+    }
+    
+  }
+
+
+ }

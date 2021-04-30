@@ -11628,6 +11628,12 @@ ul hr {
   color: #9b9b9b;
 }
 
+#results .result-container #resultRow .result-widget {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #f1eef2;
+  padding-bottom: 30px;
+}
+
 #results .result-container #resultRow .img-left img {
   height: 100%;
   -o-object-fit: fill;
@@ -11673,4 +11679,26 @@ ul hr {
 #results .result-container #resultRow ul {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  #resultRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #resultRow .result-widget {
+    width: 100%;
+  }
+  #resultRow .result-widget img {
+    width: 50%;
+  }
+  #resultRow .img-left {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #resultRow .info-right {
+    padding: 0px !important;
+  }
 }
